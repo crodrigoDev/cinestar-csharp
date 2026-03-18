@@ -1,0 +1,34 @@
+﻿@model List<mvcWebCinestar.Models.Pelicula>
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Cine.cshtml";
+    string img = "";
+}
+
+<br />
+<h1>Cartelera</h1>
+<br />
+
+    @foreach(var pelicula in Model)
+    {
+        <div class="contenido-pelicula">
+            <div class="datos-pelicula">
+                <h2>@pelicula.Titulo</h2><br />
+                <p>@pelicula.Sipnosis</p>
+                <br />
+                <div class="boton-pelicula">
+                    <a href='@Url.Action("verPelicula", "Pelicula", new { idPelicula = @pelicula.idPelicula })'>
+                        <img src="~/img/varios/btn-mas-info.jpg" width="120" height="30" alt="Ver info" />
+                    </a>
+                </div>
+                <div class="boton-pelicula">
+                <a href="https://www.youtube.com/v/@pelicula.Link" target=_blank onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">
+                        <img src="~/img/varios/btn-trailer.jpg" width="120" height="30" alt="Ver trailer" />
+                    </a>
+                </div>
+            </div>
+        @{ img = "/img/pelicula/" + @pelicula.idPelicula + ".jpg";}
+            <img src="@img" width="160" height="226" /><br /><br />
+        </div>
+    }
+    
