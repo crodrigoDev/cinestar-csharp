@@ -14,6 +14,7 @@ namespace mvcWebCinestar
             builder.Services.AddScoped<clsBD>();
             builder.Services.AddScoped<daoCine>();
             builder.Services.AddScoped<daoPelicula>();
+            builder.Services.AddScoped<HttpClient>();
 
             var app = builder.Build();
 

@@ -1,7 +1,4 @@
 ﻿
-using Microsoft.Identity.Client;
-using System.Reflection.Metadata.Ecma335;
-
 namespace mvcWebCinestar.Models
 {
     public class Cine

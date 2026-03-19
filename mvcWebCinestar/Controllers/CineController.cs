@@ -15,11 +15,11 @@ namespace mvcWebCinestar.Controllers
         {
             return View();
         }
-        public IActionResult verCines()
+        /*public IActionResult verCines()
         {
             var lista = _dao.getVerCines();
             return View(lista);
-        }
+        }*/
         public IActionResult verCine(int idCine)
         {
             var lista = _dao.getVerCine(idCine);

@@ -1,5 +1,4 @@
-﻿using System;
-namespace mvcWebCinestar.Models
+﻿namespace mvcWebCinestar.Models
 {
     public class CineTarifa
     {
